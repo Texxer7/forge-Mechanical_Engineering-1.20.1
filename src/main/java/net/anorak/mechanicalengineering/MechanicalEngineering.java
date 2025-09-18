@@ -27,7 +27,7 @@ public class MechanicalEngineering {
 
         ModCreativeModeTabs.register((modEventBus));
 
-        ModItems.register(modEventBus);;
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
