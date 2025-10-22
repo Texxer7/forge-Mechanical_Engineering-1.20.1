@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "mechanical_engineering:biomass"
+    }
+  },
+  "result": {
+    "item": "mechanical_engineering:biomass_block"
+  }
+}

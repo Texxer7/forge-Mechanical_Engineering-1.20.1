@@ -1,5 +1,13 @@
 {
   "item.mechanical_engineering.ruby": "Ruby",
   "item.mechanical_engineering.raw_ruby": "Raw Ruby",
+  "item.mechanical_engineering.biomass": "Biomass",
+
+  "block.mechanical_engineering.ruby_block": "Block of Ruby",
+  "block.mechanical_engineering.ruby_ore": "Ruby Ore",
+  "block.mechanical_engineering.biomass_block": "Block of Biomass",
+
+  "block.mechanical_engineering.sound_block": "Block that makes Sound",
+
   "creativeTab.mechanical_engineering_tab": "Mechanical Engineering"
 }

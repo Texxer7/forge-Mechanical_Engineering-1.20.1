@@ -1,6 +1,7 @@
 package net.anorak.mechanicalengineering;
 
 import com.mojang.logging.LogUtils;
+import net.anorak.mechanicalengineering.block.ModBlocks;
 import net.anorak.mechanicalengineering.item.ModCreativeModeTabs;
 import net.anorak.mechanicalengineering.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -28,6 +29,7 @@ public class MechanicalEngineering {
         ModCreativeModeTabs.register((modEventBus));
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:seeds",
+    "minecraft:wheat",
+    "minecraft:potato",
+    "minecraft:carrot",
+    "minecraft:pumpkin",
+    "minecraft:glow_berries",
+    "minecraft:sweet_berries"
+  ]
+}

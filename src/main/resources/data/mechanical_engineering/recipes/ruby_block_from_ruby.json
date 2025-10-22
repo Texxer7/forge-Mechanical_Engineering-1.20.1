@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "mechanical_engineering:ruby"
+    }
+  },
+  "result": {
+    "item": "mechanical_engineering:ruby_block"
+  }
+}
