@@ -2,8 +2,12 @@ package net.anorak.mechanicalengineering;
 
 import com.mojang.logging.LogUtils;
 import net.anorak.mechanicalengineering.block.ModBlocks;
+import net.anorak.mechanicalengineering.block.entity.ModBlockEntities;
 import net.anorak.mechanicalengineering.item.ModCreativeModeTabs;
 import net.anorak.mechanicalengineering.item.ModItems;
+import net.anorak.mechanicalengineering.screen.GemPolishingStationScreen;
+import net.anorak.mechanicalengineering.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +34,9 @@ public class MechanicalEngineering {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -60,7 +67,7 @@ public class MechanicalEngineering {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
         }
     }
 }

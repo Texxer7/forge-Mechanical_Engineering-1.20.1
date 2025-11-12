@@ -9,5 +9,7 @@
 
   "block.mechanical_engineering.sound_block": "Block that makes Sound",
 
+  "block.mechanical_engineering.gem_polishing_station": "Gem Polishing Station",
+
   "creativeTab.mechanical_engineering_tab": "Mechanical Engineering"
 }

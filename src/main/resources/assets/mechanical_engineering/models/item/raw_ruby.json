@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "mechanical_engineering:item/raw_ruby"
-  }
-}

@@ -1,6 +1,7 @@
 package net.anorak.mechanicalengineering.block;
 
 import net.anorak.mechanicalengineering.MechanicalEngineering;
+import net.anorak.mechanicalengineering.block.custom.GemPolishingStationBlock;
 import net.anorak.mechanicalengineering.block.custom.SoundBlock;
 import net.anorak.mechanicalengineering.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -30,7 +31,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK). noLootTable()));
+
+    public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

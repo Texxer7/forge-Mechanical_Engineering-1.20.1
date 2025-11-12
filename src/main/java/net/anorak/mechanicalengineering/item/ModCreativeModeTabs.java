@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BIOMASS_BLOCK.get());
 
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+
+                        pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
                     })
                     .build());
 
