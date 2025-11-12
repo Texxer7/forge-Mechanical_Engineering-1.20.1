@@ -1,0 +1,4 @@
+// 1.20.1	2025-10-29T09:49:02.72245	Tags for minecraft:block mod id mechanical_engineering
+42e2b8be49de89b26cefa969cf2e5948c410bdb7 data/minecraft/tags/blocks/mineable/hoe.json
+9c0c909c782a591659d0dad5da90d5f97a1e1f70 data/minecraft/tags/blocks/mineable/pickaxe.json
+9c0c909c782a591659d0dad5da90d5f97a1e1f70 data/minecraft/tags/blocks/needs_diamond_tool.json

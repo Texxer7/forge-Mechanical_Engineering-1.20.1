@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "mechanical_engineering:seeds"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "mechanical_engineering:biomass"
+  }
+}
