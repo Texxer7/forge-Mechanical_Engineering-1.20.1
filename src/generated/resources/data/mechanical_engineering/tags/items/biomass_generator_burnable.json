@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:beetroot",
+    "minecraft:melon_slice",
+    "minecraft:melon",
+    "mechanical_engineering:biomass",
+    "mechanical_engineering:biomass_block",
+    "#mechanical_engineering:crops",
+    "#mechanical_engineering:seeds"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "mechanical_engineering:biomass"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SBS",
+    "IRI"
+  ],
+  "result": {
+    "item": "mechanical_engineering:biomass_generator"
+  },
+  "show_notification": true
+}

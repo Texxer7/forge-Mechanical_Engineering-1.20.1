@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:calcite"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "CDC",
+    "C C"
+  ],
+  "result": {
+    "item": "mechanical_engineering:gem_polishing_station"
+  },
+  "show_notification": true
+}
