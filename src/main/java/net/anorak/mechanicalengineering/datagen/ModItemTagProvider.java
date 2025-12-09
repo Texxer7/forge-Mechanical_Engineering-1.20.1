@@ -1,6 +1,8 @@
 package net.anorak.mechanicalengineering.datagen;
 
 import net.anorak.mechanicalengineering.MechanicalEngineering;
+import net.anorak.mechanicalengineering.block.ModBlocks;
+import net.anorak.mechanicalengineering.item.ModItems;
 import net.anorak.mechanicalengineering.util.ModTags.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -36,5 +38,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.PUMPKIN_SEEDS)
                 .add(Items.TORCHFLOWER_SEEDS)
                 .add(Items.PITCHER_POD);
+
+        tag(ModTags.Items.BIOMASS_GENERATOR_BURNABLE)
+                .add(Items.BEETROOT)
+                .add(Items.MELON_SLICE)
+                .add(Items.MELON)
+                .add(ModItems.BIOMASS.get())
+                .add(ModBlocks.BIOMASS_BLOCK.get().asItem())
+                .addTag(ModTags.Items.CROPS)
+                .addTag(ModTags.Items.SEEDS);
     }
 }

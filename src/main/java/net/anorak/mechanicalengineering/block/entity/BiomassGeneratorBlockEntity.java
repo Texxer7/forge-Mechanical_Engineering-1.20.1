@@ -1,7 +1,7 @@
 package net.anorak.mechanicalengineering.block.entity;
 
 import net.anorak.mechanicalengineering.item.ModItems;
-import net.anorak.mechanicalengineering.screen.GemPolishingStationMenu;
+import net.anorak.mechanicalengineering.screen.BiomassGeneratorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 
-public class GemPolishingStationBlockEntity extends BlockEntity implements MenuProvider {
+public class BiomassGeneratorBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(2);
 
     private static final int INPUT_SLOT = 0;
@@ -40,14 +40,14 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     private int progress = 0;
     private int maxProgress = 78;
 
-    public GemPolishingStationBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.GEM_POLISHING_BE.get(), pPos, pBlockState);
+    public BiomassGeneratorBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(ModBlockEntities.BIOMASS_GENERATOR_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                    case 0 -> GemPolishingStationBlockEntity.this.progress;
-                    case 1 -> GemPolishingStationBlockEntity.this.maxProgress;
+                    case 0 -> BiomassGeneratorBlockEntity.this.progress;
+                    case 1 -> BiomassGeneratorBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -55,8 +55,8 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
             @Override
             public void set(int pIndex, int pValue) {
                 switch (pIndex) {
-                    case 0 -> GemPolishingStationBlockEntity.this.progress = pValue;
-                    case 1 -> GemPolishingStationBlockEntity.this.maxProgress = pValue;
+                    case 0 -> BiomassGeneratorBlockEntity.this.progress = pValue;
+                    case 1 -> BiomassGeneratorBlockEntity.this.maxProgress = pValue;
                 }
             }
 
@@ -100,19 +100,19 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     @Override
     @NotNull
     public Component getDisplayName() {
-        return Component.translatable("block.mechanical_engineering.gem_polishing_station");
+        return Component.translatable("block.mechanical_engineering.biomass_generator");
     }
 
 
     @Override
     public AbstractContainerMenu createMenu(int pContainerId,@Nullable Inventory pPlayerInventory,@Nullable Player pPlayer) {
-        return new GemPolishingStationMenu(pContainerId, pPlayerInventory, this, this.data);
+        return new BiomassGeneratorMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("gem_polishing_station.progress", progress);
+        pTag.putInt("biomass_generator.progress", progress);
 
         super.saveAdditional(pTag);
     }
@@ -121,7 +121,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     public void load(@Nonnull CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
-        progress = pTag.getInt("gem_polishing_station.progress");
+        progress = pTag.getInt("biomass_generator.progress");
     }
 
     public void tick(Level pLevel, BlockPos pPos, BlockState pState) {

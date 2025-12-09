@@ -17,6 +17,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(GemPolishingStationBlockEntity::new,
                             ModBlocks.GEM_POLISHING_STATION.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<BiomassGeneratorBlockEntity>> BIOMASS_GENERATOR_BE =
+            BLOCK_ENTITIES.register("biomass_generator_be", () ->
+                    BlockEntityType.Builder.of(BiomassGeneratorBlockEntity::new,
+                            ModBlocks.BIOMASS_GENERATOR.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

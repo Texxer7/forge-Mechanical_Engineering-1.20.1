@@ -1,6 +1,7 @@
 package net.anorak.mechanicalengineering.block;
 
 import net.anorak.mechanicalengineering.MechanicalEngineering;
+import net.anorak.mechanicalengineering.block.custom.BiomassGeneratorBlock;
 import net.anorak.mechanicalengineering.block.custom.GemPolishingStationBlock;
 import net.anorak.mechanicalengineering.block.custom.SoundBlock;
 import net.anorak.mechanicalengineering.item.ModItems;
@@ -36,6 +37,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
             () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final RegistryObject<Block> BIOMASS_GENERATOR = registerBlock("biomass_generator",
+            () -> new BiomassGeneratorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

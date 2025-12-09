@@ -1,5 +1,6 @@
 package net.anorak.mechanicalengineering.item;
 
+import io.netty.util.Attribute;
 import net.anorak.mechanicalengineering.MechanicalEngineering;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;

@@ -17,6 +17,8 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<GemPolishingStationMenu>> GEM_POLISHING_MENU =
             registerMenuType("gem_polishing_menu", GemPolishingStationMenu::new);
 
+    public static final RegistryObject<MenuType<BiomassGeneratorMenu>> BIOMASS_GENERATOR_MENU =
+            registerMenuType("biomass_generator_menu", BiomassGeneratorMenu::new);
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name, IContainerFactory<T> factory) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

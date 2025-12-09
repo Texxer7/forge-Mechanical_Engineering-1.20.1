@@ -21,7 +21,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.RUBY_BLOCK.get())
                 .add(ModBlocks.RUBY_ORE.get())
-                .add(ModBlocks.GEM_POLISHING_STATION.get());
+                .add(ModBlocks.GEM_POLISHING_STATION.get())
+                .add(ModBlocks.BIOMASS_GENERATOR.get());
 
 
         tag(BlockTags.MINEABLE_WITH_HOE)
@@ -32,6 +33,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RUBY_ORE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.GEM_POLISHING_STATION.get());
+                .add(ModBlocks.GEM_POLISHING_STATION.get())
+                .add(ModBlocks.BIOMASS_GENERATOR.get());
     }
 }

@@ -19,6 +19,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BIOMASS_BLOCK.get());
         dropSelf(ModBlocks.RUBY_BLOCK.get());
         dropSelf(ModBlocks.GEM_POLISHING_STATION.get());
+        dropSelf(ModBlocks.BIOMASS_GENERATOR.get());
 
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_ORE.get(), ModItems.RAW_RUBY.get()));

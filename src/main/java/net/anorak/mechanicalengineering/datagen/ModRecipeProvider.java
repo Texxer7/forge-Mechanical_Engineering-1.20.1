@@ -35,6 +35,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()), has(ModBlocks.RUBY_BLOCK.get()))
                 .save(pWriter);
 
+//*************** Biomass stuff ****************************************************************************************//
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BIOMASS_BLOCK.get())
                 .pattern("BB")
                 .pattern("BB")
@@ -47,17 +48,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.BIOMASS_BLOCK.get()), has(ModBlocks.BIOMASS_BLOCK.get()))
                 .save(pWriter, MechanicalEngineering.MOD_ID + ":biomass_from_biomass_block");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BIOMASS.get(), 1)
-                .requires(Ingredient.of(ModTags.Items.SEEDS))
-                .unlockedBy("has_seeds", has(ModTags.Items.SEEDS))
-                .save(pWriter, MechanicalEngineering.MOD_ID + ":biomass_from_seeds");
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BIOMASS.get(), 2)
                 .requires(Ingredient.of(ModTags.Items.CROPS))
                 .unlockedBy("has_crops", has(ModTags.Items.CROPS))
                 .save(pWriter, MechanicalEngineering.MOD_ID + ":biomass_from_crops");
 
-
+//*************** Other ****************************************************************************************//
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.PUMPKIN_SEEDS, 4)
                 .pattern("PS")
                 .define('P', Items.PUMPKIN)
@@ -65,6 +61,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.PUMPKIN), has(Items.PUMPKIN))
                 .save(pWriter);
 
+//*************** Block Entities****************************************************************************************//
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GEM_POLISHING_STATION.get(), 1)
                 .pattern("SSS")
                 .pattern("CDC")
@@ -73,6 +70,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('C', Items.CALCITE)
                 .define('D', Items.DIAMOND)
                 .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BIOMASS_GENERATOR.get(), 1)
+                .pattern("SSS")
+                .pattern("SBS")
+                .pattern("IRI")
+                .define('S', Items.STONE)
+                .define('B', ModItems.BIOMASS.get())
+                .define('I', Items.IRON_INGOT)
+                .define('R', Items.REDSTONE_BLOCK)
+                .unlockedBy(getHasName(ModItems.BIOMASS.get()), has(ModItems.BIOMASS.get()))
                 .save(pWriter);
     }
 }

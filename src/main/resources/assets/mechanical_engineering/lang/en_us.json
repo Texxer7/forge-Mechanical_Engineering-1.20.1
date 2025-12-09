@@ -10,6 +10,7 @@
   "block.mechanical_engineering.sound_block": "Block that makes Sound",
 
   "block.mechanical_engineering.gem_polishing_station": "Gem Polishing Station",
+  "block.mechanical_engineering.biomass_generator": "Biomass Generator",
 
   "creativeTab.mechanical_engineering_tab": "Mechanical Engineering"
 }

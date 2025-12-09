@@ -1,6 +1,8 @@
 {
   "values": [
     "mechanical_engineering:ruby_block",
-    "mechanical_engineering:ruby_ore"
+    "mechanical_engineering:ruby_ore",
+    "mechanical_engineering:gem_polishing_station",
+    "mechanical_engineering:biomass_generator"
   ]
 }

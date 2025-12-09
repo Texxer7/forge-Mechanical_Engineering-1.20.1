@@ -5,6 +5,7 @@ import net.anorak.mechanicalengineering.block.ModBlocks;
 import net.anorak.mechanicalengineering.block.entity.ModBlockEntities;
 import net.anorak.mechanicalengineering.item.ModCreativeModeTabs;
 import net.anorak.mechanicalengineering.item.ModItems;
+import net.anorak.mechanicalengineering.screen.BiomassGeneratorScreen;
 import net.anorak.mechanicalengineering.screen.GemPolishingStationScreen;
 import net.anorak.mechanicalengineering.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -68,6 +69,7 @@ public class MechanicalEngineering {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
+            MenuScreens.register(ModMenuTypes.BIOMASS_GENERATOR_MENU.get(), BiomassGeneratorScreen::new);
         }
     }
 }
