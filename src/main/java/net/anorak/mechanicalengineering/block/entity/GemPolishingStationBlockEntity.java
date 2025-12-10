@@ -26,8 +26,6 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nonnull;
-
 public class GemPolishingStationBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(2);
 
@@ -88,7 +86,6 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
         lazyItemHandler.invalidate();
     }
 
-
     public void drops() {
         SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
         for(int i = 0; i < itemHandler.getSlots(); i++) {
@@ -98,14 +95,13 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     @Override
-    @NotNull
     public Component getDisplayName() {
         return Component.translatable("block.mechanical_engineering.gem_polishing_station");
     }
 
-
+    @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int pContainerId,@Nullable Inventory pPlayerInventory,@Nullable Player pPlayer) {
+    public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
         return new GemPolishingStationMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
@@ -118,7 +114,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     @Override
-    public void load(@Nonnull CompoundTag pTag) {
+    public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
         progress = pTag.getInt("gem_polishing_station.progress");
